@@ -1,31 +1,31 @@
-import random
-
-enemy_count = 0
-
-class Enemies:
-
-    weapons = {"Gun": 20, "Knife":15, "Poison":10}
-
-    def __init__(self,name,clan,ability):
-        self.name = name
-        self.clan = clan
-        self.ability = ability
-
-
-    def set_description(self, description):
-        self.description = description
-
-    def get_description(self):
-        return f""" This enemy's name is {self.name} they are from the {self.clan} clan,
-and their ability is: {self.ability} {self.description}"""
-
-
-    def set_weapon(self, weapon):
-        self.weapon = weapon
-        self.damage = Enemies.weapons[self.weapon]
-
-    def get_weapon(self):
-        return f" Weapon:{self.weapon}, Damage: {self.damage} "
+# import random
+#
+# enemy_count = 0
+#
+# class Enemies:
+#
+#     weapons = {"Gun": 20, "Knife":15, "Poison":10}
+#
+#     def __init__(self,name,clan,ability):
+#         self.name = name
+#         self.clan = clan
+#         self.ability = ability
+#
+#
+#     def set_description(self, description):
+#         self.description = description
+#
+#     def get_description(self):
+#         return f""" This enemy's name is {self.name} they are from the {self.clan} clan,
+# and their ability is: {self.ability} {self.description}"""
+#
+#
+#     def set_weapon(self, weapon):
+#         self.weapon = weapon
+#         self.damage = Enemies.weapons[self.weapon]
+#
+#     def get_weapon(self):
+#         return f" Weapon:{self.weapon}, Damage: {self.damage} "
 
 
 
@@ -44,9 +44,42 @@ and their ability is: {self.ability} {self.description}"""
 #
 
 
-list_of_enemies =[]
+# list_of_enemies =[]
+#
+# while enemy_count<5:
+#     list_of_enemies.append(Enemies.weapons)
+#     enemy_count += 1
+#     print(list_of_enemies)
 
-while enemy_count<5:
-    list_of_enemies.append(Enemies.weapons)
-    enemy_count += 1
-    print(list_of_enemies)
+
+#Exercise 2
+
+class Collectibles:
+
+    choice = 5
+
+
+    def __init__(self):
+        self.choice = choice
+
+    def get_input(self):
+        player_input = input("enter in a number between 1 and 6")
+        print("this is the player input:", player_input)
+
+    
+
+
+class Coins(Collectibles):
+    pass
+
+
+class Potions(Collectibles):
+    def addpoints(self,player_input):
+        if player_input >=4:
+            print("this number is higher than 4")
+
+
+
+a = Coins()
+a.get_input()
+
